@@ -20,8 +20,8 @@ class DashboardController extends AbstractDashboardController
      */
     public function index(): Response
     {
-        return $this->render('bundles/EasyAdminBundle/welcome.html.twig');
-      //  return parent::index();
+       return $this->render('bundles/EasyAdminBundle/dashboard.html.twig');
+       // return parent::index();
     }
     
     /**
@@ -43,8 +43,8 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
-        yield MenuItem::linkToCrud('Category', 'fas fa-list', Category::class);
-        yield MenuItem::linkToCrud('Post', 'fas fa-newspaper', Post::class);
+        yield MenuItem::linkToCrud('Category', 'fa fa-list', Category::class);
+        yield MenuItem::linkToCrud('Articles', 'fa fa-newspaper', Post::class);
        // yield MenuItem::linkToCrud('User', 'fas fa-user', User::class);
     }
 }
